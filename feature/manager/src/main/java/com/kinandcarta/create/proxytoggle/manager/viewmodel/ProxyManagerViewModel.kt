@@ -99,7 +99,7 @@ class ProxyManagerViewModel @Inject constructor(
     }
 
     private fun onAddressChanged(newText: String) {
-        val newTextFiltered = newText.filter { it.isDigit() || it == '.' }
+        val newTextFiltered = newText.filter { it.isLetterOrDigit() || it == '.' || it == '-' }
         updateDisconnectedState {
             it.copy(addressState = it.addressState.copy(text = newTextFiltered))
         }
@@ -138,7 +138,7 @@ class ProxyManagerViewModel @Inject constructor(
 
         viewModelScope.launch {
             when {
-                proxyValidator.isValidIP(address).not() -> {
+                proxyValidator.isValidAddress(address).not() -> {
                     delay(ERROR_DELAY)
                     updateErrors(ProxyManagerError.InvalidAddress)
                 }

@@ -5,6 +5,8 @@
 
 # Proxy Toggle
 
+- 我的版本：支持了域名的格式。之前只支持IP地址，在 AI 的帮助下支持了域名。下方的 Release 请移步至 [latest release](https://github.com/DearDawn/android-proxy-toggle/releases/latest)
+
 Small application to help Android and Test Engineers to quickly enable/disable global proxy settings without the faff of going through the annoying Network Settings path.
 
 ---

@@ -10,8 +10,8 @@ class ProxyValidator @Inject constructor() {
         const val MAX_PORT = 65535
     }
 
-    fun isValidIP(input: String): Boolean {
-        return PatternsCompat.IP_ADDRESS.matcher(input).matches()
+    fun isValidAddress(input: String): Boolean {
+        return PatternsCompat.IP_ADDRESS.matcher(input).matches() || PatternsCompat.DOMAIN_NAME.matcher(input).matches()
     }
 
     fun isValidPort(input: String): Boolean {

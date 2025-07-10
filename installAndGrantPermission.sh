@@ -8,4 +8,4 @@ then
     exit
 fi
 
-adb install -t -r -g proxy-toggle.apk
+adb install -t -r -g proxy-toggle-v2.apk

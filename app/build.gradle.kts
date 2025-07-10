@@ -12,7 +12,7 @@ android {
     defaultConfig {
         applicationId = "com.kinandcarta.create.proxytoggle"
 
-        versionName = "1.2.0"
+        versionName = "1.2.1"
         versionCode = common.versionCode(versionName)
     }
 
@@ -23,6 +23,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 rootProject.file("proguard-rules.pro")
             )
+            signingConfig = signingConfigs.getByName("debug")
         }
     }
 }
